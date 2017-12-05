@@ -14,6 +14,38 @@ def index(request):
     context = {}
     return render(request,'index.html',context)
 
+def index_register(request):
+    if request.method == "GET":
+        form = UserCreationForm
+
+    if request.method == "POST":
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect(to='login')
+
+    context = {}
+    context['form'] = form
+    return render(request, 'register.html', context)
+
+def index_login(request):
+    page_next = request.GET.get("next")
+
+    if request.method=='GET':
+        form=AuthenticationForm
+    if request.method=='POST':
+        form=AuthenticationForm(data=request.POST)
+        if form.is_valid():
+            login(request,form.get_user())
+            if page_next :
+                return redirect(to=page_next)
+            else :
+                return redirect(to="index")
+
+    context = {}
+    context['form'] = form
+    return render(request, 'login.html', context)
+
 
 def upload(request):
 
