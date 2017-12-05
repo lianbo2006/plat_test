@@ -6,30 +6,30 @@
     <title>index</title>
     <link rel="stylesheet" href="/static/css/semantic.css" media="screen" title="no title" charset="utf-8">
     <style media="screen">
-    .ui.inverted.top.borderless.blue.menu {
+    .ui.inverted.top.borderless.teal.menu {
         margin-bottom: 0px;
     }
     .ui.vertical.segment.masthead {
-        height: 300px;
-        background: url('/static/images/RoboBrain.jpg');
+        height: 500px;
+        background: url('/static/images/SWFC.jpg');
         background-size: cover;
-        background-position: 100% 80%;
+        background-position: 100% 50%;
         }
     .ui.basic.center.aligned.segment p {
       font-style: oblique;
       font-size: 15px;
     }
-    </style>s
+    </style>
   </head>
   <body>
 
-    <div class="ui inverted top borderless blue menu">
+    <div class="ui inverted top borderless teal menu">
         <div class="header item">
-            <h2 class="ui inverted header">NEU云机器人</h2>
+            <h1 class="ui inverted header">ClroboOs</h1>
         </div>
 
-        <a href="/index/" class="item active"><h3 class="ui inverted header">首页</h3></a>
-        <a href="/control_panel/" class="item"><h3 class="ui inverted header">控制终端</h3></a>
+        <!--<a href="/index/" class="item active"><h3 class="ui inverted header">首页</h3></a>-->
+        <!--<a href="/control_panel/" class="item"><h3 class="ui inverted header">控制终端</h3></a>-->
 
         <div class=" right menu">
           {% if request.user.is_authenticated %}
@@ -64,16 +64,30 @@
 
     <div class="ui segment" style="margin-left:15px;margin-right:15px;">
       <div class="ui grid">
-        <div class="twelve wide column">
+        <div class="ten wide column">
           <div class="ui  basic segment">
-            <img src="/static/images/control_panel.png" alt="control_panel.png" >
+            <div class="ui secondary vertical pointing menu">
+              <a href="/index/" class="item active">
+                首页
+              </a>
+                <a class="item">
+                镜像上传
+              </a>
+              <a class="item">
+                已有镜像管理
+              </a>
+              <a class="item">
+                服务管理
+              </a>
+
+            </div>
           </div>
         </div>
 
-        <div class=" four wide column">
+        <div class=" six wide column">
           <div class="ui basic center aligned segment" style="position:absolute;top:50%;transform:translate(-50%,-50%);">
-              <h4>该系统为移动机器人远程导航与控制测试系统</h4>
-              <h4>若需使用控制终端，请登陆后操作</h4>
+              <h4>该系统为机器人云服务远程测试系统</h4>
+              <h4>若需使用其他内容,请登陆后操作</h4>
           </div>
         </div>
 
