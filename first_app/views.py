@@ -51,3 +51,18 @@ def upload(request):
 
     context = {}
     return render(request,'upload.html',context)
+
+def softwares(request):
+
+    context = {}
+    return render(request,'softwares.html',context)
+
+def software_info(request):
+
+    context = {}
+    return render(request,'softwares_softwareinfo.html',context)
+
+def services(request):
+
+    context = {}
+    return render(request,'services.html',context)

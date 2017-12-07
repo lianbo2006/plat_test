@@ -58,13 +58,13 @@
               <a href="/index/" class="item">
                 首页
               </a>
-                <a href="/upload/" class="item active">
+                <a href="/upload/" class="item ">
                 软件包上传
               </a>
               <a href="/softwares/" class="item">
                 已有镜像管理
               </a>
-              <a href="/services/" class="item">
+              <a href="/services/" class="item active">
                 服务管理
               </a>
 
@@ -73,12 +73,52 @@
         </div>
           <div class=" two wide column"></div>
         <div class=" eight wide column">
-          <div class="ui basic center aligned segment">
-             <div class="ui left aligned segment ">请选择软件包: <input type="file" /></div>
-             <div class="ui left aligned segment ">请选择配置文件: <input type="file" /></div>
-              <div class="ui left aligned segment ">请输入备注: <input type="text" /></div>
-             <div class="ui button"><i class="save icon"></i>提交</div>
-          </div>
+
+              <h2 class="ui header">正在运行的服务列表</h2>
+
+             <table class="ui celled table">
+              <thead>
+                <tr><th>服务id</th>
+                <th>文件名</th>
+                <th></th>
+              </tr></thead>
+              <tbody>
+                <tr>
+                  <td><a>123456789</a></td>
+                  <td>test.zip</td>
+                  <td><button class="ui red labeled icon button"><i class="stop icon"></i>停止</button></td>
+                </tr>
+                <tr>
+                  <td>Cell</td>
+                  <td>Cell</td>
+                  <td><button class="ui red labeled icon button"><i class="stop icon"></i>停止</button></td>
+                </tr>
+                <tr>
+                  <td>Cell</td>
+                  <td>Cell</td>
+                  <td><button class="ui red labeled icon button"><i class="stop icon"></i>停止</button></td>
+                </tr>
+
+              </tbody>
+              <tfoot>
+                <tr><th colspan="3">
+                  <div class="ui right floated pagination menu">
+                    <a class="icon item">
+                      <i class="left chevron icon"></i>
+                    </a>
+                    <a class="item">1</a>
+                    <a class="item">2</a>
+                    <a class="item">3</a>
+                    <a class="item">4</a>
+                    <a class="icon item">
+                      <i class="right chevron icon"></i>
+                    </a>
+                  </div>
+                </th>
+              </tr></tfoot>
+            </table>
+
+
         </div>
 
       </div>
