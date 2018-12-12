@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" href="/static/images/robot.png">
+    <title>upload</title>
+    <link rel="stylesheet" href="/static/css/semantic.css" media="screen" title="no title" charset="utf-8">
+    <style media="screen">
+    .ui.basic.center.aligned.segment h4 {
+      font-style: oblique;
+      font-size: 15px;
+    }
+    </style>
+  </head>
+  <body>
+
+    <div class="ui inverted top borderless teal menu">
+        <div class="header item">
+            <h1 class="ui inverted header">ClroboOs</h1>
+        </div>
+
+
+        <div class=" right menu">
+          {% if request.user.is_authenticated %}
+          <div class="item">
+              <h5 class="ui inverted header">
+                      <div class="ui mini circular image">
+                          <img src=" /static/images/turtlebot.jpeg" alt="">
+                      </div>
+
+                      <span>{{request.user.username}}</span>
+                  </h5>
+          </div>
+          <div class="item">
+
+              <a href="/logout/" class="ui inverted circular button">Logout</a>
+
+          </div>
+          {% else %}
+
+          <div class="item">
+
+              <a href="/login/" class="ui inverted circular button">Login/Register</a>
+
+          </div>
+          {% endif %}
+
+        </div>
+
+    </div>
+
+
+    <div class="ui container segment" style="margin-left:15px;margin-right:15px;">
+      <div class="ui grid">
+        <div class="four wide column">
+          <div class="ui  basic segment">
+            <div class="ui secondary vertical pointing menu">
+              <a href="/index/" class="item">
+                首页
+              </a>
+                <a href="/upload/" class="item ">
+                软件包上传
+              </a>
+              <a href="/softwares/" class="item active">
+                已有镜像管理
+              </a>
+              <a href="/services/" class="item">
+                服务管理
+              </a>
+
+            </div>
+          </div>
+        </div>
+          <div class=" two wide column"></div>
+        <div class=" eight wide column">
+
+            <h2 class="ui header">软件包 id:3517461874</h2>
+            <div class="ui basic segment">
+              <h3 class="ui header">上传信息</h3>
+                 <table class="ui celled table"><thead>
+                    <tr>
+                    <th>文件名</th>
+                    <th>上传用户</th>
+                    <th>上传时间</th>
+                    </tr></thead>
+                    <tbody>
+                    <tr>
+                      <td>cmd_ctrl.zip</td>
+                      <td>admin</td>
+                      <td><p>2018-10-15</p><p>19:35:44</p></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="ui basic segment">
+              <h3 class="ui header">使用信息</h3>
+                 <table class="ui celled table"><thead>
+                    <tr>
+                    <th>订阅消息</th>
+                    <th>发布消息</th>
+                    <th>广播服务</th>
+                    <th>广播动作</th>
+                    </tr></thead>
+                    <tbody>
+                    <tr>
+                      <td><p>/cmd_vel1</p><p>/cmd_vel2</p></td>
+                      <td>/cmd_vel3</td>
+                      <td>/cmd_vel_advise</td>
+                      <td></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="ui basic segment">
+                <h3 class="ui header">备注</h3>
+                <p>远程控制</p>
+            </div>
+
+            <div class="ui basic segment">
+            <button class="ui red basic button">下载运行文件</button><button class="ui red basic button">下载软件包</button>
+            </div>
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+  </body>
+</html>
